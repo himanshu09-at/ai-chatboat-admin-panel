@@ -1,0 +1,49 @@
+[
+    {
+        "columns": [
+            {
+                "name": "id",
+                "dataType": "int",
+                "columnDescription": "Unique identifier for the record"
+            },
+            {
+                "name": "isLastProcessStep",
+                "dataType": "tinyint",
+                "columnDescription": "Indicates whether this is the last process step (0 or 1)"
+            },
+            {
+                "name": "processStepDescription",
+                "dataType": "text",
+                "columnDescription": "The 'processStepDescription' column is of type 'text', is non-nullable, and serves to provide detailed descriptions of each step in a process, ensuring clarity and consistency in workflow documentation. This column is essential for understanding the sequence of operations and may relate to other process-related entities within the database."
+            },
+            {
+                "name": "processStepIdentifier",
+                "dataType": "text",
+                "columnDescription": "Identifier for the specific process step"
+            },
+            {
+                "name": "processStepNumber",
+                "dataType": "int",
+                "columnDescription": "The sequence number of the process step"
+            },
+            {
+                "name": "response",
+                "dataType": "text",
+                "columnDescription": "The 'response' column is of type 'text', allowing for nullable entries, which means it can store variable-length textual data without enforcing a non-null constraint. This column is typically used to capture user feedback or answers in applications, and it does not have any primary or foreign key relationships, indicating it functions independently within the database schema."
+            },
+            {
+                "name": "status",
+                "dataType": "enum",
+                "columnDescription": "Current status of the process step"
+            },
+            {
+                "name": "taskId",
+                "dataType": "varchar",
+                "columnDescription": "Reference ID for the related task"
+            }
+        ],
+        "tableName": "uiLoader",
+        "tableDescription": "Stores the different process steps in the UI and their statuses.",
+        "tableBusinessContext": "Tracks UI process steps"
+    }
+]
